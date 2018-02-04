@@ -3,4 +3,5 @@
     <string name="title">BlackJack</string>
     <string name="play">Play</string>
     <string name="pick">Pick a card</string>
+    <string name="high_score">High Scores</string>
 </resources>
