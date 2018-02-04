@@ -10,5 +10,6 @@
         android:layout_height="wrap_content"
         android:text="@string/high_score"
         android:gravity="center"
+        android:textAlignment="center"
         android:textSize="30sp" />
 </LinearLayout>

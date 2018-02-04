@@ -10,5 +10,6 @@
         android:layout_height="wrap_content"
         android:text="@string/pick"
         android:gravity="center"
+        android:textAlignment="center"
         android:textSize="30sp" />
 </LinearLayout>
