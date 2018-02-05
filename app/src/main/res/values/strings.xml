@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BlackJack_Assignment1</string>
     <string name="title">BlackJack</string>
-    <string name="play">Play</string>
-    <string name="pick">Pick a card</string>
+    <string name="play">Play Now!</string>
+    <string name="pick">Pick A Card</string>
+    <string name="high_score">High Scores</string>
 </resources>
