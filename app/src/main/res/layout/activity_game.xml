@@ -14,5 +14,13 @@
         android:text="@string/pick"
         android:gravity="center"
         android:textAlignment="center"
+        android:paddingBottom="400dp"
         android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/score_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#a42020"
+        android:text="View Highscores" />
 </LinearLayout>
