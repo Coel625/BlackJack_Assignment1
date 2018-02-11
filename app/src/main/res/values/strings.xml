@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">BlackJack_Assignment1</string>
     <string name="title">BlackJack</string>
-    <string name="play">Play</string>
-    <string name="pick">Pick a card</string>
+    <string name="play">Play Now!</string>
+    <string name="pick">Pick A Card</string>
     <string name="high_score">High Scores</string>
-    <string name="wikipedia_rules">Wikipedia Rules</string>
+    <string name="finish">Finish</string>
+    <string name="total_card">Total Card Value (Must be \u003c\u003d 21)</string>
 </resources>

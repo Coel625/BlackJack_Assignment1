@@ -40,6 +40,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -49,7 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="NAME"
-                android:textColor="#ec5d10" />
+                android:textColor="#ec5d10"
+                android:textSize="30sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -63,7 +70,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="9999"
-                android:textColor="#ec5d10" />
+                android:textColor="#ec5d10"
+                android:textSize="30sp" />
         </LinearLayout>
 
     </LinearLayout>
