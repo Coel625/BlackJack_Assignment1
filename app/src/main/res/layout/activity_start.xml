@@ -2,28 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorBackground">
-
-    <TextView
+    android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="150dp"
-        android:text="@string/title"
-        android:textColor="#be2828"
-        android:typeface="sans"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:textSize="50sp" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:gravity="center"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/play_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:textSize="30sp" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/play_button"
+        android:id="@+id/wiki_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#a42020"
-        android:typeface="serif"
-        android:layout_marginTop="10dp"
-        android:text="@string/play"
-        android:textSize="30sp" />
+        android:text="@string/wikipedia_rules" />
 
 </LinearLayout>
