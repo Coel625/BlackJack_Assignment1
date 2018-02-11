@@ -2,9 +2,7 @@ package edu.apsu.csci.blackjack_assignment1;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,7 +76,13 @@ implements View.OnClickListener{
         Random r = new Random();
 
         if (view.getId() == R.id.imageButton1 || view.getId() == R.id.imageButton2 || view.getId() == R.id.imageButton3) {
+            EditText etStatic = (EditText) findViewById(R.id.editText);
+            String etStaticString = etStatic.getText().toString();
+            int etStaticInt = Integer.parseInt(etStaticString);
+
             if (counter == 0) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+
                 iv.setTag(images[r.nextInt(images.length)]);
                 iv.setImageResource(images[getDrawableId(iv) % images.length]);
                 if (getDrawableId(iv) == 0 || getDrawableId(iv) == 13 || getDrawableId(iv) == 26 || getDrawableId(iv) == 39) {
@@ -105,6 +109,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -129,6 +134,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -152,6 +158,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -175,6 +182,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -198,6 +206,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -221,6 +230,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -244,6 +254,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -267,6 +278,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -290,6 +302,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -313,6 +326,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -336,6 +350,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -359,6 +374,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -382,23 +398,65 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 1) {
-                iv2.setTag(images[r.nextInt(images.length)]);
-                iv2.setImageResource(images[getDrawableId(iv2) % images.length]);
-                if (getDrawableId(iv2) == 0 || getDrawableId(iv2) == 13 || getDrawableId(iv2) == 26 || getDrawableId(iv2) == 39) {
-                    if ((21 - cardValue) >= 10) {
-                        cardValue += 11;
-                        counter++;
-                    } else {
-                        if ((21 - cardValue) >= 1) {
-                            cardValue += 1;
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
+                if (et2Int == 0) {
+                    Toast.makeText(this, "Now make a bet before continuing", Toast.LENGTH_LONG).show();
+                } else {
+                    iv2.setTag(images[r.nextInt(images.length)]);
+                    iv2.setImageResource(images[getDrawableId(iv2) % images.length]);
+                    if (getDrawableId(iv2) == 0 || getDrawableId(iv2) == 13 || getDrawableId(iv2) == 26 || getDrawableId(iv2) == 39) {
+                        if ((21 - cardValue) >= 10) {
+                            cardValue += 11;
+                            counter++;
+                        } else {
+                            if ((21 - cardValue) >= 1) {
+                                cardValue += 1;
+                                counter++;
+                            } else {
+                                Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                                etStaticInt = etStaticInt - et2Int;
+                                cardValue = etStaticInt;
+                                etStatic.setText(cardValue.toString());
+
+                                cardValue = 0;
+                                counter = 0;
+                                iv.setImageResource(R.drawable.red_grid_card);
+                                iv2.setImageResource(R.drawable.red_grid_card);
+                                iv3.setImageResource(R.drawable.red_grid_card);
+                                iv4.setImageResource(R.drawable.red_grid_card);
+                                iv5.setImageResource(R.drawable.red_grid_card);
+                                iv6.setImageResource(R.drawable.red_grid_card);
+                                iv7.setImageResource(R.drawable.red_grid_card);
+                                iv8.setImageResource(R.drawable.red_grid_card);
+                                iv9.setImageResource(R.drawable.red_grid_card);
+                                iv10.setImageResource(R.drawable.red_grid_card);
+                                iv11.setImageResource(R.drawable.red_grid_card);
+                                iv12.setImageResource(R.drawable.red_grid_card);
+                                et2.setText(cardValue.toString());
+                            }
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 1 || getDrawableId(iv2) == 14 || getDrawableId(iv2) == 27 || getDrawableId(iv2) == 40) {
+                        if ((21 - cardValue) >= 2) {
+                            cardValue += 2;
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -413,288 +471,325 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 2 || getDrawableId(iv2) == 15 || getDrawableId(iv2) == 28 || getDrawableId(iv2) == 41) {
+                        if ((21 - cardValue) >= 3) {
+                            cardValue += 3;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 3 || getDrawableId(iv2) == 16 || getDrawableId(iv2) == 29 || getDrawableId(iv2) == 42) {
+                        if ((21 - cardValue) >= 4) {
+                            cardValue += 4;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 4 || getDrawableId(iv2) == 17 || getDrawableId(iv2) == 30 || getDrawableId(iv2) == 43) {
+                        if ((21 - cardValue) >= 5) {
+                            cardValue += 5;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 5 || getDrawableId(iv2) == 18 || getDrawableId(iv2) == 31 || getDrawableId(iv2) == 44) {
+                        if ((21 - cardValue) >= 6) {
+                            cardValue += 6;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 6 || getDrawableId(iv2) == 19 || getDrawableId(iv2) == 32 || getDrawableId(iv2) == 45) {
+                        if ((21 - cardValue) >= 7) {
+                            cardValue += 7;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 7 || getDrawableId(iv2) == 20 || getDrawableId(iv2) == 33 || getDrawableId(iv2) == 46) {
+                        if ((21 - cardValue) >= 8) {
+                            cardValue += 8;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 8 || getDrawableId(iv2) == 21 || getDrawableId(iv2) == 34 || getDrawableId(iv2) == 47) {
+                        if ((21 - cardValue) >= 9) {
+                            cardValue += 9;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 9 || getDrawableId(iv2) == 10 || getDrawableId(iv2) == 11 || getDrawableId(iv2) == 12) {
+                        if ((21 - cardValue) >= 10) {
+                            cardValue += 10;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 22 || getDrawableId(iv2) == 23 || getDrawableId(iv2) == 24 || getDrawableId(iv2) == 25) {
+                        if ((21 - cardValue) >= 10) {
+                            cardValue += 10;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 35 || getDrawableId(iv2) == 36 || getDrawableId(iv2) == 37 || getDrawableId(iv2) == 38) {
+                        if ((21 - cardValue) >= 10) {
+                            cardValue += 10;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
+                    } else if (getDrawableId(iv2) == 48 || getDrawableId(iv2) == 49 || getDrawableId(iv2) == 50 || getDrawableId(iv2) == 51) {
+                        if ((21 - cardValue) >= 10) {
+                            cardValue += 10;
+                            counter++;
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
+                            cardValue = 0;
+                            counter = 0;
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                        }
+                        et.setText(cardValue.toString());
                     }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 1 || getDrawableId(iv2) == 14 || getDrawableId(iv2) == 27 || getDrawableId(iv2) == 40) {
-                    if ((21 - cardValue) >= 2) {
-                        cardValue += 2;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 2 || getDrawableId(iv2) == 15 || getDrawableId(iv2) == 28 || getDrawableId(iv2) == 41) {
-                    if ((21 - cardValue) >= 3) {
-                        cardValue += 3;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 3 || getDrawableId(iv2) == 16 || getDrawableId(iv2) == 29 || getDrawableId(iv2) == 42) {
-                    if ((21 - cardValue) >= 4) {
-                        cardValue += 4;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 4 || getDrawableId(iv2) == 17 || getDrawableId(iv2) == 30 || getDrawableId(iv2) == 43) {
-                    if ((21 - cardValue) >= 5) {
-                        cardValue += 5;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 5 || getDrawableId(iv2) == 18 || getDrawableId(iv2) == 31 || getDrawableId(iv2) == 44) {
-                    if ((21 - cardValue) >= 6) {
-                        cardValue += 6;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 6 || getDrawableId(iv2) == 19 || getDrawableId(iv2) == 32 || getDrawableId(iv2) == 45) {
-                    if ((21 - cardValue) >= 7) {
-                        cardValue += 7;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 7 || getDrawableId(iv2) == 20 || getDrawableId(iv2) == 33 || getDrawableId(iv2) == 46) {
-                    if ((21 - cardValue) >= 8) {
-                        cardValue += 8;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 8 || getDrawableId(iv2) == 21 || getDrawableId(iv2) == 34 || getDrawableId(iv2) == 47) {
-                    if ((21 - cardValue) >= 9) {
-                        cardValue += 9;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 9 || getDrawableId(iv2) == 10 || getDrawableId(iv2) == 11 || getDrawableId(iv2) == 12) {
-                    if ((21 - cardValue) >= 10) {
-                        cardValue += 10;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 22 || getDrawableId(iv2) == 23 || getDrawableId(iv2) == 24 || getDrawableId(iv2) == 25) {
-                    if ((21 - cardValue) >= 10) {
-                        cardValue += 10;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 35 || getDrawableId(iv2) == 36 || getDrawableId(iv2) == 37 || getDrawableId(iv2) == 38) {
-                    if ((21 - cardValue) >= 10) {
-                        cardValue += 10;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
-                }
-                else if (getDrawableId(iv2) == 48 || getDrawableId(iv2) == 49 || getDrawableId(iv2) == 50 || getDrawableId(iv2) == 51) {
-                    if ((21 - cardValue) >= 10) {
-                        cardValue += 10;
-                        counter++;
-                    } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        cardValue = 0;
-                        counter = 0;
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                    }
-                    et.setText(cardValue.toString());
                 }
             }
             else if (counter == 2) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv3.setTag(images[r.nextInt(images.length)]);
                 iv3.setImageResource(images[getDrawableId(iv3) % images.length]);
                 if (getDrawableId(iv3) == 0 || getDrawableId(iv3) == 13 || getDrawableId(iv3) == 26 || getDrawableId(iv3) == 39) {
@@ -707,6 +802,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -721,6 +821,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -731,6 +832,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -745,6 +851,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -754,6 +861,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -768,6 +880,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -777,6 +890,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -791,6 +909,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -800,6 +919,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -814,6 +938,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -823,6 +948,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -837,6 +967,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -846,6 +977,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -860,6 +996,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -869,6 +1006,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -883,6 +1025,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -892,6 +1035,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -906,6 +1054,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -915,6 +1064,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -929,6 +1083,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -938,6 +1093,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -952,6 +1112,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -961,6 +1122,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -975,6 +1141,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -984,6 +1151,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -998,11 +1170,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 3) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv4.setTag(images[r.nextInt(images.length)]);
                 iv4.setImageResource(images[getDrawableId(iv4) % images.length]);
                 if (getDrawableId(iv4) == 0 || getDrawableId(iv4) == 13 || getDrawableId(iv4) == 26 || getDrawableId(iv4) == 39) {
@@ -1015,6 +1192,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -1029,6 +1211,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1039,6 +1222,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1053,6 +1241,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1062,6 +1251,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1076,6 +1270,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1085,6 +1280,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1099,6 +1299,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1108,6 +1309,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1122,6 +1328,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1131,6 +1338,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1145,6 +1357,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1154,6 +1367,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1168,6 +1386,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1177,6 +1396,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1191,6 +1415,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1200,6 +1425,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1214,6 +1444,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1223,6 +1454,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1237,6 +1473,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1246,6 +1483,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1260,6 +1502,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1269,6 +1512,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1283,6 +1531,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1292,6 +1541,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1306,11 +1560,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 4) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv5.setTag(images[r.nextInt(images.length)]);
                 iv5.setImageResource(images[getDrawableId(iv5) % images.length]);
                 if (getDrawableId(iv5) == 0 || getDrawableId(iv5) == 13 || getDrawableId(iv5) == 26 || getDrawableId(iv5) == 39) {
@@ -1323,6 +1582,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -1337,6 +1601,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1347,6 +1612,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1361,6 +1631,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1370,6 +1641,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1384,6 +1660,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1393,6 +1670,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1407,6 +1689,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1416,6 +1699,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1430,6 +1718,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1439,6 +1728,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1453,6 +1747,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1462,6 +1757,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1476,6 +1776,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1485,6 +1786,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1499,6 +1805,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1508,6 +1815,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1522,6 +1834,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1531,6 +1844,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1545,6 +1863,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1554,6 +1873,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1568,6 +1892,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1577,6 +1902,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1591,6 +1921,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1600,6 +1931,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1614,11 +1950,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 5) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv6.setTag(images[r.nextInt(images.length)]);
                 iv6.setImageResource(images[getDrawableId(iv6) % images.length]);
                 if (getDrawableId(iv6) == 0 || getDrawableId(iv6) == 13 || getDrawableId(iv6) == 26 || getDrawableId(iv6) == 39) {
@@ -1631,6 +1972,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -1645,6 +1991,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1655,6 +2002,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1669,6 +2021,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1678,6 +2031,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1692,6 +2050,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1701,6 +2060,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1715,6 +2079,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1724,6 +2089,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1738,6 +2108,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1747,6 +2118,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1761,6 +2137,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1770,6 +2147,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1784,6 +2166,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1793,6 +2176,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1807,6 +2195,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1816,6 +2205,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1830,6 +2224,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1839,6 +2234,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1853,6 +2253,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1862,6 +2263,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1876,6 +2282,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1885,6 +2292,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1899,6 +2311,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1908,6 +2321,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1922,11 +2340,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 6) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv7.setTag(images[r.nextInt(images.length)]);
                 iv7.setImageResource(images[getDrawableId(iv7) % images.length]);
                 if (getDrawableId(iv7) == 0 || getDrawableId(iv7) == 13 || getDrawableId(iv7) == 26 || getDrawableId(iv7) == 39) {
@@ -1939,6 +2362,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -1953,6 +2381,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1963,6 +2392,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -1977,6 +2411,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1986,6 +2421,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2000,6 +2440,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2009,6 +2450,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2023,6 +2469,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2032,6 +2479,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2046,6 +2498,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2055,6 +2508,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2069,6 +2527,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2078,6 +2537,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2092,6 +2556,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2101,6 +2566,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2115,6 +2585,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2124,6 +2595,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2138,6 +2614,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2147,6 +2624,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2161,6 +2643,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2170,6 +2653,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2184,6 +2672,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2193,6 +2682,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2207,6 +2701,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2216,6 +2711,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2230,11 +2730,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 7) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv8.setTag(images[r.nextInt(images.length)]);
                 iv8.setImageResource(images[getDrawableId(iv8) % images.length]);
                 if (getDrawableId(iv8) == 0 || getDrawableId(iv8) == 13 || getDrawableId(iv8) == 26 || getDrawableId(iv8) == 39) {
@@ -2247,6 +2752,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -2261,6 +2771,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -2271,6 +2782,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2285,6 +2801,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2294,6 +2811,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2308,6 +2830,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2317,6 +2840,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2331,6 +2859,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2340,6 +2869,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2354,6 +2888,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2363,6 +2898,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2377,6 +2917,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2386,6 +2927,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2400,6 +2946,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2409,6 +2956,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2423,6 +2975,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2432,6 +2985,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2446,6 +3004,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2455,6 +3014,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2469,6 +3033,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2478,6 +3043,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2492,6 +3062,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2501,6 +3072,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2515,6 +3091,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2524,6 +3101,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2538,11 +3120,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 8) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv9.setTag(images[r.nextInt(images.length)]);
                 iv9.setImageResource(images[getDrawableId(iv9) % images.length]);
                 if (getDrawableId(iv9) == 0 || getDrawableId(iv9) == 13 || getDrawableId(iv9) == 26 || getDrawableId(iv9) == 39) {
@@ -2555,6 +3142,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -2569,6 +3161,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -2579,6 +3172,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2593,6 +3191,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2602,6 +3201,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2616,6 +3220,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2625,6 +3230,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2639,6 +3249,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2648,6 +3259,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2662,6 +3278,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2671,6 +3288,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2685,6 +3307,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2694,6 +3317,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2708,6 +3336,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2717,6 +3346,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2731,6 +3365,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2740,6 +3375,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2754,6 +3394,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2763,6 +3404,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2777,6 +3423,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2786,6 +3433,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2800,6 +3452,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2809,6 +3462,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2823,6 +3481,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2832,6 +3491,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2846,11 +3510,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 9) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv10.setTag(images[r.nextInt(images.length)]);
                 iv10.setImageResource(images[getDrawableId(iv10) % images.length]);
                 if (getDrawableId(iv10) == 0 || getDrawableId(iv10) == 13 || getDrawableId(iv10) == 26 || getDrawableId(iv10) == 39) {
@@ -2863,6 +3532,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -2877,6 +3551,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -2887,6 +3562,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2901,6 +3581,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2910,6 +3591,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2924,6 +3610,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2933,6 +3620,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2947,6 +3639,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2956,6 +3649,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2970,6 +3668,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2979,6 +3678,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -2993,6 +3697,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3002,6 +3707,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3016,6 +3726,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3025,6 +3736,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3039,6 +3755,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3048,6 +3765,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3062,6 +3784,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3071,6 +3794,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3085,6 +3813,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3094,6 +3823,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3108,6 +3842,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3117,6 +3852,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3131,6 +3871,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3140,6 +3881,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3154,11 +3900,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 10) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv11.setTag(images[r.nextInt(images.length)]);
                 iv11.setImageResource(images[getDrawableId(iv11) % images.length]);
                 if (getDrawableId(iv11) == 0 || getDrawableId(iv11) == 13 || getDrawableId(iv11) == 26 || getDrawableId(iv11) == 39) {
@@ -3171,6 +3922,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -3185,6 +3941,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -3195,6 +3952,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3209,6 +3971,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3218,6 +3981,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3232,6 +4000,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3241,6 +4010,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3255,6 +4029,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3264,6 +4039,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3278,6 +4058,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3287,6 +4068,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3301,6 +4087,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3310,6 +4097,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3324,6 +4116,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3333,6 +4126,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3347,6 +4145,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3356,6 +4155,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3370,6 +4174,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3379,6 +4184,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3393,6 +4203,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3402,6 +4213,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3416,6 +4232,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3425,6 +4242,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3439,6 +4261,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3448,6 +4271,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3462,11 +4290,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
             else if (counter == 11) {
+                EditText et2 = (EditText) findViewById(R.id.editText2);
+                String et2String = et2.getText().toString();
+                int et2Int = Integer.parseInt(et2String);
+
                 iv12.setTag(images[r.nextInt(images.length)]);
                 iv12.setImageResource(images[getDrawableId(iv12) % images.length]);
                 if (getDrawableId(iv12) == 0 || getDrawableId(iv12) == 13 || getDrawableId(iv12) == 26 || getDrawableId(iv12) == 39) {
@@ -3479,6 +4312,11 @@ implements View.OnClickListener{
                             counter++;
                         } else {
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                            etStaticInt = etStaticInt - et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+
                             cardValue = 0;
                             counter = 0;
                             iv.setImageResource(R.drawable.red_grid_card);
@@ -3493,6 +4331,7 @@ implements View.OnClickListener{
                             iv10.setImageResource(R.drawable.red_grid_card);
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
                         }
                     }
                     et.setText(cardValue.toString());
@@ -3503,6 +4342,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3517,6 +4361,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3526,6 +4371,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3540,6 +4390,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3549,6 +4400,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3563,6 +4419,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3572,6 +4429,11 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3586,6 +4448,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3595,6 +4458,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3609,6 +4476,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3618,6 +4486,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3632,6 +4504,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3641,6 +4514,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3655,6 +4532,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3664,6 +4542,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3678,6 +4560,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3687,6 +4570,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3701,6 +4588,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3710,6 +4598,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3724,6 +4616,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3733,6 +4626,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3747,6 +4644,7 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3756,6 +4654,10 @@ implements View.OnClickListener{
                         counter++;
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
+
                         cardValue = 0;
                         counter = 0;
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -3770,15 +4672,16 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
+                        et2.setText(cardValue.toString());
                     }
                     et.setText(cardValue.toString());
                 }
             }
         }
         else if (view.getId() == R.id.submit_button) {
-            EditText etSame = (EditText) findViewById(R.id.editText);
-            String etSameString = etSame.getText().toString();
-            int etSameInt = Integer.parseInt(etSameString);
+            EditText etStatic = (EditText) findViewById(R.id.editText);
+            String etStaticString = etStatic.getText().toString();
+            int etStaticInt = Integer.parseInt(etStaticString);
 
             String etString = et.getText().toString();
             int etInt = Integer.parseInt(etString);
@@ -3793,7 +4696,6 @@ implements View.OnClickListener{
                     Toast.makeText(this, "Make a bet before submitting", Toast.LENGTH_LONG).show();
                 } else {
                     if (getRandomBoolean()) {
-                        Log.d("BABALAFULAAAAAAAAAAAAA", "Value: " + et2String);
                         Toast.makeText(this, "You won", Toast.LENGTH_LONG).show();
                         iv.setImageResource(R.drawable.red_grid_card);
                         iv2.setImageResource(R.drawable.red_grid_card);
@@ -3807,15 +4709,14 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
-                        etSameInt = etSameInt + et2Int;
-                        cardValue = etSameInt;
-                        etSame.setText(cardValue.toString());
+                        etStaticInt = etStaticInt + et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
                         counter = 0;
                         cardValue = 0;
                         et.setText(cardValue.toString());
                         et2.setText(cardValue.toString());
                     } else {
-                        Log.d("BABALAFULAAAAAAAAAAAAA", "Value: " + et2String);
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         iv.setImageResource(R.drawable.red_grid_card);
                         iv2.setImageResource(R.drawable.red_grid_card);
@@ -3829,9 +4730,9 @@ implements View.OnClickListener{
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
-                        etSameInt = etSameInt - et2Int;
-                        cardValue = etSameInt;
-                        etSame.setText(cardValue.toString());
+                        etStaticInt = etStaticInt - et2Int;
+                        cardValue = etStaticInt;
+                        etStatic.setText(cardValue.toString());
                         counter = 0;
                         cardValue = 0;
                         et.setText(cardValue.toString());
