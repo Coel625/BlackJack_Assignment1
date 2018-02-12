@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class HighscoreActivity extends Activity {
 
     public class Score {
@@ -31,6 +34,13 @@ public class HighscoreActivity extends Activity {
             return name + " " + score;
         }
     }
+        public class Sortbyscore implements Comparator<Score> {
+        // Used for sorting in ascending order of
+        // roll number
+        public int compare(Score a, Score b) {
+            return Integer.parseInt(b.score) - Integer.parseInt(a.score);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +59,8 @@ public class HighscoreActivity extends Activity {
                 new Score("USP","700"),
                 new Score("ODM","600"),
                 new Score("ODM","500")};
+
+          Arrays.sort(SCORES, new Sortbyscore());
 
         TextView tv = (TextView) findViewById(R.id.tv_name_1);
         tv.setText(SCORES[0].getName());
