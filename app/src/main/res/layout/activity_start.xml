@@ -11,7 +11,7 @@
             android:text="@string/title"
             android:paddingTop="150dp"
             android:gravity="center"
-            android:textColor="#be2828"
+            android:textColor="#d64646"
             android:textSize="50sp" />
 
         <Button
