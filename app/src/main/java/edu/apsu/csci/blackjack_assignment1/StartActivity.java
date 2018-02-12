@@ -14,7 +14,7 @@ public class StartActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        int ids[]={R.id.play_btn, R.id.wiki_btn};
+        int ids[]={R.id.play_button};
         for (int id : ids) {
             Button btn=(Button) findViewById(id);
             btn.setOnClickListener(this);
@@ -22,21 +22,11 @@ public class StartActivity extends Activity implements View.OnClickListener {
     }
             @Override
             public void onClick(View view) {
-                if (view.getId() == R.id.play_btn) {
+                if (view.getId() == R.id.play_button) {
                     Intent intent=new Intent(
                             getApplicationContext(),
                             GameActivity.class);
                     startActivity(intent);
-                }
-                if (view.getId() == R.id.wiki_btn) {
-                    view.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Uri uri=Uri.parse("https://en.wikipedia.org/wiki/Blackjack");
-                            Intent search=new Intent(Intent.ACTION_VIEW, uri);
-                            startActivity(search);//implicit intent
-                        }
-                    });
                 }
             }
     }

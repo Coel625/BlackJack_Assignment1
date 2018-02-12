@@ -49,16 +49,17 @@ public class HighscoreActivity extends Activity {
         Intent intent = getIntent();
         String score = intent.getStringExtra(GameActivity.SCORE_KEY);
           Score[] SCORES = {
-                new Score("YOU",score),
-                new Score("TEC","1400"),
-                new Score("ESN","1300"),
-                new Score("EMA","1100"),
-                new Score("TIS","1000"),
-                new Score("ROL","900"),
-                new Score("ODM","800"),
-                new Score("USP","700"),
-                new Score("ODM","600"),
-                new Score("ODM","500")};
+                new Score("YOU!",score),
+                new Score("TECA","1400"),
+                new Score("ESNB","1300"),
+                new Score("OCTD","1200"),
+                new Score("EMAC","1100"),
+                new Score("TISE","1000"),
+                new Score("ROLF","900"),
+                new Score("ODMG","800"),
+                new Score("USPH","700"),
+                new Score("IMEI","600"),
+                new Score("ROLJ","501")};
 
           Arrays.sort(SCORES, new Sortbyscore());
 

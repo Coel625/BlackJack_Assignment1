@@ -271,10 +271,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -309,10 +317,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -346,10 +355,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -383,10 +393,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -420,10 +431,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -457,10 +469,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -494,10 +507,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -531,10 +545,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -568,10 +583,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -605,10 +621,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -642,10 +659,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -679,10 +697,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -716,10 +735,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -764,10 +784,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -802,10 +830,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -839,10 +868,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -876,10 +906,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -913,10 +944,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -950,10 +982,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -987,10 +1020,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1024,10 +1058,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1061,10 +1096,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1098,10 +1134,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1135,10 +1172,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1172,10 +1210,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1209,10 +1248,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1257,10 +1297,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -1295,10 +1343,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1332,10 +1381,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1369,10 +1419,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1406,10 +1457,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1443,10 +1495,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1480,10 +1533,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1517,10 +1571,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1554,10 +1609,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1591,10 +1647,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1628,10 +1685,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1665,10 +1723,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1702,10 +1761,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1750,10 +1810,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -1788,10 +1856,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1825,10 +1894,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1862,10 +1932,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1899,10 +1970,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1936,10 +2008,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -1973,10 +2046,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2010,10 +2084,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2047,10 +2122,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2084,10 +2160,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2121,10 +2198,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2158,10 +2236,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2195,10 +2274,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2243,10 +2323,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -2281,10 +2369,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2318,10 +2407,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2355,10 +2445,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2392,10 +2483,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2429,10 +2521,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2466,10 +2559,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2503,10 +2597,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2540,10 +2635,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2577,10 +2673,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2614,10 +2711,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2651,10 +2749,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2688,10 +2787,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2736,10 +2836,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -2774,10 +2882,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2811,10 +2920,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2848,10 +2958,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2885,10 +2996,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2922,10 +3034,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2959,10 +3072,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -2996,10 +3110,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3033,10 +3148,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3070,10 +3186,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3107,10 +3224,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3144,10 +3262,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3181,10 +3300,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3229,10 +3349,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -3267,10 +3395,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3304,10 +3433,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3341,10 +3471,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3378,10 +3509,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3415,10 +3547,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3452,10 +3585,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3489,10 +3623,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3526,10 +3661,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3563,10 +3699,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3600,10 +3737,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3637,10 +3775,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3674,10 +3813,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3722,10 +3862,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -3760,10 +3908,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3797,10 +3946,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3834,10 +3984,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3871,10 +4022,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3908,10 +4060,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3945,10 +4098,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -3982,10 +4136,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4019,10 +4174,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4056,10 +4212,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4093,10 +4250,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4130,10 +4288,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4167,10 +4326,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4215,10 +4375,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -4253,10 +4421,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4290,10 +4459,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4327,10 +4497,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4364,10 +4535,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4401,10 +4573,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4438,10 +4611,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4475,10 +4649,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4512,10 +4687,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4549,10 +4725,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4586,10 +4763,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4623,10 +4801,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4660,10 +4839,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4708,10 +4888,18 @@ public class GameActivity extends Activity
                             etStaticInt = etStaticInt - et2Int;
                             if (etStaticInt <= 0) {
                                 etStaticInt = 0;
-                                Intent intent = new Intent(
-                                        getApplicationContext(),
-                                        HighscoreActivity.class);
-                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                                if (intent.hasExtra(etStaticString)) {
+                                    intent.putExtra(SCORE_KEY,etStaticString);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    startActivity(intent);
+                                }
+
+
+
+
                             }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
@@ -4746,10 +4934,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4783,10 +4972,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4820,10 +5010,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4857,10 +5048,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4893,10 +5085,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4929,10 +5122,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -4965,10 +5159,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -5001,10 +5196,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -5037,10 +5233,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -5073,10 +5270,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -5109,10 +5307,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -5145,10 +5344,11 @@ public class GameActivity extends Activity
                         etStaticInt = etStaticInt - et2Int;
                         if (etStaticInt <= 0) {
                             etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
+                            etStaticString = "0";
+                            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                            intent.putExtra(SCORE_KEY,etStaticString);
                             startActivity(intent);
+
                         }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
@@ -5191,56 +5391,60 @@ public class GameActivity extends Activity
                 if (et2Int == 0) {
                     Toast.makeText(this, "Make a bet before submitting", Toast.LENGTH_LONG).show();
                 } else {
-                    if (getRandomBoolean()) {
-                        Toast.makeText(this, "You won!", Toast.LENGTH_LONG).show();
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                        etStaticInt = etStaticInt + et2Int;
-                        cardValue = etStaticInt;
-                        etStatic.setText(cardValue.toString());
-                        counter = 0;
-                        cardValue = 0;
-                        et.setText(cardValue.toString());
-                        et2.setText(cardValue.toString());
+                    if (et2Int > etStaticInt) {
+                        Toast.makeText(this, "You can't bet more than you have!", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
-                        iv.setImageResource(R.drawable.red_grid_card);
-                        iv2.setImageResource(R.drawable.red_grid_card);
-                        iv3.setImageResource(R.drawable.red_grid_card);
-                        iv4.setImageResource(R.drawable.red_grid_card);
-                        iv5.setImageResource(R.drawable.red_grid_card);
-                        iv6.setImageResource(R.drawable.red_grid_card);
-                        iv7.setImageResource(R.drawable.red_grid_card);
-                        iv8.setImageResource(R.drawable.red_grid_card);
-                        iv9.setImageResource(R.drawable.red_grid_card);
-                        iv10.setImageResource(R.drawable.red_grid_card);
-                        iv11.setImageResource(R.drawable.red_grid_card);
-                        iv12.setImageResource(R.drawable.red_grid_card);
-                        et2.setText(cardValue.toString());
-                        etStaticInt = etStaticInt - et2Int;
-                        if (etStaticInt <= 0) {
-                            etStaticInt = 0;
-                            Intent intent = new Intent(
-                                    getApplicationContext(),
-                                    HighscoreActivity.class);
-                            startActivity(intent);
+                        if (getRandomBoolean()) {
+                            Toast.makeText(this, "You won!", Toast.LENGTH_LONG).show();
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            etStaticInt = etStaticInt + et2Int;
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+                            counter = 0;
+                            cardValue = 0;
+                            et.setText(cardValue.toString());
+                            et2.setText(cardValue.toString());
+                        } else {
+                            Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
+                            iv.setImageResource(R.drawable.red_grid_card);
+                            iv2.setImageResource(R.drawable.red_grid_card);
+                            iv3.setImageResource(R.drawable.red_grid_card);
+                            iv4.setImageResource(R.drawable.red_grid_card);
+                            iv5.setImageResource(R.drawable.red_grid_card);
+                            iv6.setImageResource(R.drawable.red_grid_card);
+                            iv7.setImageResource(R.drawable.red_grid_card);
+                            iv8.setImageResource(R.drawable.red_grid_card);
+                            iv9.setImageResource(R.drawable.red_grid_card);
+                            iv10.setImageResource(R.drawable.red_grid_card);
+                            iv11.setImageResource(R.drawable.red_grid_card);
+                            iv12.setImageResource(R.drawable.red_grid_card);
+                            et2.setText(cardValue.toString());
+                            etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
+                            cardValue = etStaticInt;
+                            etStatic.setText(cardValue.toString());
+                            counter = 0;
+                            cardValue = 0;
+                            et.setText(cardValue.toString());
+                            et2.setText(cardValue.toString());
                         }
-                        cardValue = etStaticInt;
-                        etStatic.setText(cardValue.toString());
-                        counter = 0;
-                        cardValue = 0;
-                        et.setText(cardValue.toString());
-                        et2.setText(cardValue.toString());
                     }
                 }
             }
@@ -5248,9 +5452,19 @@ public class GameActivity extends Activity
         else if (view.getId() == R.id.finish_button) {
             EditText etStatic = (EditText) findViewById(R.id.editText);
             String etStaticString = etStatic.getText().toString();
-            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
-            intent.putExtra(SCORE_KEY,etStaticString);
-            startActivity(intent);
+            int etStaticInt = Integer.parseInt(etStaticString);
+            if (etStaticInt <= 0) {
+                etStaticInt = 0;
+                etStaticString = "0";
+                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                intent.putExtra(SCORE_KEY,etStaticString);
+                startActivity(intent);
+            }
+            else {
+                Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+                intent.putExtra(SCORE_KEY,etStaticString);
+                startActivity(intent);
+            }
         }
     }
 
