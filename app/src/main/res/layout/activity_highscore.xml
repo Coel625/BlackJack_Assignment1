@@ -33,7 +33,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="|       1.        |       2.        |       3.        |       4.        |       5.        |       6.        |       7.        |       8.        |       9.        |     10."
+                android:text="|   1.        |   2.        |   3.        |   4.        |   5.        |   6.        |   7.        |   8.        |   9.        | 10."
                 android:textColor="#ec5d10"
                 android:textSize="26sp" />
         </LinearLayout>
@@ -51,12 +51,80 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+            android:id="@+id/tv_name_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:textColor="#ec5d10"
+            android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_name_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="NAME"
                 android:textColor="#ec5d10"
-                android:textSize="30sp" />
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_name_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_name_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_name_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_name_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_name_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_name_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_name_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/tv_name_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,13 +134,77 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tv_score_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="9999"
                 android:textColor="#ec5d10"
-                android:textSize="30sp" />
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tv_score_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9999"
+                android:textColor="#ec5d10"
+                android:textSize="23sp" />
         </LinearLayout>
+
 
     </LinearLayout>
 
