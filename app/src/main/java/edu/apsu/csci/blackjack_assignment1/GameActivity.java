@@ -17,6 +17,7 @@ public class GameActivity extends Activity
 
     int counter = 0;
     Integer cardValue = 0;
+    public static final String SCORE_KEY = "score";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -5246,9 +5247,10 @@ public class GameActivity extends Activity
             }
         }
         else if (view.getId() == R.id.finish_button) {
-            Intent intent = new Intent(
-                    getApplicationContext(),
-                    HighscoreActivity.class);
+            EditText etStatic = (EditText) findViewById(R.id.editText);
+            String etStaticString = etStatic.getText().toString();
+            Intent intent = new Intent(getApplicationContext(), HighscoreActivity.class);
+            intent.putExtra(SCORE_KEY,etStaticString);
             startActivity(intent);
         }
     }
