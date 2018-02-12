@@ -5191,8 +5191,7 @@ public class GameActivity extends Activity
                     Toast.makeText(this, "Make a bet before submitting", Toast.LENGTH_LONG).show();
                 } else {
                     if (getRandomBoolean()) {
-                        Toast.makeText(this, "You won", Toast.LENGTH_LONG).show();
-                        //add external intent using getExtra for the etStatic int value
+                        Toast.makeText(this, "You won!", Toast.LENGTH_LONG).show();
                         iv.setImageResource(R.drawable.red_grid_card);
                         iv2.setImageResource(R.drawable.red_grid_card);
                         iv3.setImageResource(R.drawable.red_grid_card);
