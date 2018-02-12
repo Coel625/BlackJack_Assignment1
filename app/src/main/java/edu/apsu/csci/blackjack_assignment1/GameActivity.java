@@ -77,93 +77,93 @@ public class GameActivity extends Activity
 
         if (view.getId() == R.id.imageButton1 || view.getId() == R.id.imageButton2 || view.getId() == R.id.imageButton3) {
             EditText et2 = (EditText) findViewById(R.id.editText2);
-            et2.setFocusable(true);
+
 
             EditText etStatic = (EditText) findViewById(R.id.editText);
             String etStaticString = etStatic.getText().toString();
             int etStaticInt = Integer.parseInt(etStaticString);
 
             if (counter == 0) {
-                et2.setFocusable(true);
+
                 iv.setTag(images[r.nextInt(images.length)]);
                 iv.setImageResource(images[getDrawableId(iv) % images.length]);
                 if (getDrawableId(iv) == 0 || getDrawableId(iv) == 13 || getDrawableId(iv) == 26 || getDrawableId(iv) == 39) {
                     cardValue += 11;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 1 || getDrawableId(iv) == 14 || getDrawableId(iv) == 27 || getDrawableId(iv) == 40) {
                     cardValue += 2;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 2 || getDrawableId(iv) == 15 || getDrawableId(iv) == 28 || getDrawableId(iv) == 41) {
                     cardValue += 3;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 3 || getDrawableId(iv) == 16 || getDrawableId(iv) == 29 || getDrawableId(iv) == 42) {
                     cardValue += 4;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 4 || getDrawableId(iv) == 17 || getDrawableId(iv) == 30 || getDrawableId(iv) == 43) {
                     cardValue += 5;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 5 || getDrawableId(iv) == 18 || getDrawableId(iv) == 31 || getDrawableId(iv) == 44) {
                     cardValue += 6;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 6 || getDrawableId(iv) == 19 || getDrawableId(iv) == 32 || getDrawableId(iv) == 45) {
                     cardValue += 7;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 7 || getDrawableId(iv) == 20 || getDrawableId(iv) == 33 || getDrawableId(iv) == 46) {
                     cardValue += 8;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 8 || getDrawableId(iv) == 21 || getDrawableId(iv) == 34 || getDrawableId(iv) == 47) {
                     cardValue += 9;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 9 || getDrawableId(iv) == 10 || getDrawableId(iv) == 11 || getDrawableId(iv) == 12) {
                     cardValue += 10;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 22 || getDrawableId(iv) == 23 || getDrawableId(iv) == 24 || getDrawableId(iv) == 25) {
                     cardValue += 10;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 35 || getDrawableId(iv) == 36 || getDrawableId(iv) == 37 || getDrawableId(iv) == 38) {
                     cardValue += 10;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
                 else if (getDrawableId(iv) == 48 || getDrawableId(iv) == 49 || getDrawableId(iv) == 50 || getDrawableId(iv) == 51) {
                     cardValue += 10;
                     counter++;
                     et.setText(cardValue.toString());
-                    et2.setFocusable(true);
+
                 }
             }
             else if (counter == 1) {
@@ -180,73 +180,73 @@ public class GameActivity extends Activity
                             cardValue += 11;
                             counter++;
                             et.setText(cardValue.toString());
-                            et2.setFocusable(false);
+
                         } else {
                             cardValue += 1;
                             counter++;
                             et.setText(cardValue.toString());
-                            et2.setFocusable(false);
+
                         }
                     } else if (getDrawableId(iv2) == 1 || getDrawableId(iv2) == 14 || getDrawableId(iv2) == 27 || getDrawableId(iv2) == 40) {
                         cardValue += 2;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 2 || getDrawableId(iv2) == 15 || getDrawableId(iv2) == 28 || getDrawableId(iv2) == 41) {
                         cardValue += 3;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 3 || getDrawableId(iv2) == 16 || getDrawableId(iv2) == 29 || getDrawableId(iv2) == 42) {
                         cardValue += 4;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 4 || getDrawableId(iv2) == 17 || getDrawableId(iv2) == 30 || getDrawableId(iv2) == 43) {
                         cardValue += 5;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 5 || getDrawableId(iv2) == 18 || getDrawableId(iv2) == 31 || getDrawableId(iv2) == 44) {
                         cardValue += 6;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 6 || getDrawableId(iv2) == 19 || getDrawableId(iv2) == 32 || getDrawableId(iv2) == 45) {
                         cardValue += 7;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 7 || getDrawableId(iv2) == 20 || getDrawableId(iv2) == 33 || getDrawableId(iv2) == 46) {
                         cardValue += 8;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 8 || getDrawableId(iv2) == 21 || getDrawableId(iv2) == 34 || getDrawableId(iv2) == 47) {
                         cardValue += 9;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 9 || getDrawableId(iv2) == 10 || getDrawableId(iv2) == 11 || getDrawableId(iv2) == 12) {
                         cardValue += 10;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 22 || getDrawableId(iv2) == 23 || getDrawableId(iv2) == 24 || getDrawableId(iv2) == 25) {
                         cardValue += 10;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 35 || getDrawableId(iv2) == 36 || getDrawableId(iv2) == 37 || getDrawableId(iv2) == 38) {
                         cardValue += 10;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     } else if (getDrawableId(iv2) == 48 || getDrawableId(iv2) == 49 || getDrawableId(iv2) == 50 || getDrawableId(iv2) == 51) {
                         cardValue += 10;
                         counter++;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(false);
+
                     }
                 }
             }
@@ -268,6 +268,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -286,7 +293,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -299,6 +306,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -317,7 +331,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -329,6 +343,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -347,7 +368,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -359,6 +380,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -377,7 +405,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -389,6 +417,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -407,7 +442,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -419,6 +454,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -437,7 +479,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -449,6 +491,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -467,7 +516,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -479,6 +528,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -497,7 +553,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -509,6 +565,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -527,7 +590,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -539,6 +602,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -557,7 +627,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -569,6 +639,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -587,7 +664,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -599,6 +676,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -617,7 +701,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -629,6 +713,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -647,7 +738,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -670,6 +761,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -688,7 +786,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -701,6 +799,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -719,7 +824,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -731,6 +836,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -749,7 +861,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -761,6 +873,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -779,7 +898,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -791,6 +910,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -809,7 +935,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -821,6 +947,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -839,7 +972,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -851,6 +984,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -869,7 +1009,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -881,6 +1021,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -899,7 +1046,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -911,6 +1058,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -929,7 +1083,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -941,6 +1095,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -959,7 +1120,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -971,6 +1132,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -989,7 +1157,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1001,6 +1169,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1019,7 +1194,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1031,6 +1206,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1049,7 +1231,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1072,6 +1254,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -1090,7 +1279,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1103,6 +1292,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1121,7 +1317,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1133,6 +1329,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1151,7 +1354,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1163,6 +1366,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1181,7 +1391,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1193,6 +1403,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1211,7 +1428,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1223,6 +1440,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1241,7 +1465,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1253,6 +1477,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1271,7 +1502,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1283,6 +1514,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1301,7 +1539,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1313,6 +1551,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1331,7 +1576,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1343,6 +1588,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1361,7 +1613,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1373,6 +1625,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1391,7 +1650,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1403,6 +1662,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1421,7 +1687,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1433,6 +1699,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1451,7 +1724,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1474,6 +1747,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -1492,7 +1772,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1505,6 +1785,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1523,7 +1810,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1535,6 +1822,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1553,7 +1847,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1565,6 +1859,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1583,7 +1884,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1595,6 +1896,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1613,7 +1921,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1625,6 +1933,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1643,7 +1958,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1655,6 +1970,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1673,7 +1995,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1685,6 +2007,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1703,7 +2032,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1715,6 +2044,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1733,7 +2069,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1745,6 +2081,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1763,7 +2106,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1775,6 +2118,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1793,7 +2143,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1805,6 +2155,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1823,7 +2180,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1835,6 +2192,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1853,7 +2217,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1876,6 +2240,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -1894,7 +2265,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -1907,6 +2278,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1925,7 +2303,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1937,6 +2315,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1955,7 +2340,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1967,6 +2352,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -1985,7 +2377,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -1997,6 +2389,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2015,7 +2414,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2027,6 +2426,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2045,7 +2451,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2057,6 +2463,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2075,7 +2488,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2087,6 +2500,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2105,7 +2525,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2117,6 +2537,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2135,7 +2562,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2147,6 +2574,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2165,7 +2599,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2177,6 +2611,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2195,7 +2636,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2207,6 +2648,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2225,7 +2673,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2237,6 +2685,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2255,7 +2710,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2278,6 +2733,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -2296,7 +2758,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -2309,6 +2771,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2327,7 +2796,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2339,6 +2808,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2357,7 +2833,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2369,6 +2845,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2387,7 +2870,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2399,6 +2882,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2417,7 +2907,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2429,6 +2919,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2447,7 +2944,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2459,6 +2956,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2477,7 +2981,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2489,6 +2993,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2507,7 +3018,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2519,6 +3030,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2537,7 +3055,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2549,6 +3067,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2567,7 +3092,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2579,6 +3104,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2597,7 +3129,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2609,6 +3141,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2627,7 +3166,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2639,6 +3178,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2657,7 +3203,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2680,6 +3226,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -2698,7 +3251,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -2711,6 +3264,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2729,7 +3289,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2741,6 +3301,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2759,7 +3326,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2771,6 +3338,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2789,7 +3363,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2801,6 +3375,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2819,7 +3400,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2831,6 +3412,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2849,7 +3437,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2861,6 +3449,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2879,7 +3474,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2891,6 +3486,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2909,7 +3511,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2921,6 +3523,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2939,7 +3548,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2951,6 +3560,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2969,7 +3585,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -2981,6 +3597,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -2999,7 +3622,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3011,6 +3634,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3029,7 +3659,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3041,6 +3671,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3059,7 +3696,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3082,6 +3719,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -3100,7 +3744,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -3113,6 +3757,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3131,7 +3782,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3143,6 +3794,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3161,7 +3819,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3173,6 +3831,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3191,7 +3856,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3203,6 +3868,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3221,7 +3893,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3233,6 +3905,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3251,7 +3930,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3263,6 +3942,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3281,7 +3967,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3293,6 +3979,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3311,7 +4004,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3323,6 +4016,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3341,7 +4041,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3353,6 +4053,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3371,7 +4078,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3383,6 +4090,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3401,7 +4115,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3413,6 +4127,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3431,7 +4152,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3443,6 +4164,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3461,7 +4189,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3484,6 +4212,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -3502,7 +4237,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -3515,6 +4250,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3533,7 +4275,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3545,6 +4287,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3563,7 +4312,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3575,6 +4324,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3593,7 +4349,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3605,6 +4361,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3623,7 +4386,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3635,6 +4398,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3653,7 +4423,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3665,6 +4435,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3683,7 +4460,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3695,6 +4472,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3713,7 +4497,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3725,6 +4509,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3743,7 +4534,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3755,6 +4546,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3773,7 +4571,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3785,6 +4583,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3803,7 +4608,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3815,6 +4620,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3833,7 +4645,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3845,6 +4657,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3863,7 +4682,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3886,6 +4705,13 @@ public class GameActivity extends Activity
                             Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                             etStaticInt = etStaticInt - et2Int;
+                            if (etStaticInt <= 0) {
+                                etStaticInt = 0;
+                                Intent intent = new Intent(
+                                        getApplicationContext(),
+                                        HighscoreActivity.class);
+                                startActivity(intent);
+                            }
                             cardValue = etStaticInt;
                             etStatic.setText(cardValue.toString());
 
@@ -3904,7 +4730,7 @@ public class GameActivity extends Activity
                             iv11.setImageResource(R.drawable.red_grid_card);
                             iv12.setImageResource(R.drawable.red_grid_card);
                             et2.setText(cardValue.toString());
-                            et2.setFocusable(true);
+
                         }
                     }
                     et.setText(cardValue.toString());
@@ -3917,6 +4743,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3935,7 +4768,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3947,6 +4780,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3965,7 +4805,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -3977,6 +4817,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -3995,7 +4842,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4007,6 +4854,13 @@ public class GameActivity extends Activity
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
 
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4025,7 +4879,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4036,6 +4890,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4054,7 +4915,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4065,6 +4926,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4083,7 +4951,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4094,6 +4962,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4112,7 +4987,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4123,6 +4998,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4141,7 +5023,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4152,6 +5034,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4170,7 +5059,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4181,6 +5070,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4199,7 +5095,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4210,6 +5106,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4228,7 +5131,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4239,6 +5142,13 @@ public class GameActivity extends Activity
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
 
@@ -4257,7 +5167,7 @@ public class GameActivity extends Activity
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
-                        et2.setFocusable(true);
+
                     }
                     et.setText(cardValue.toString());
                 }
@@ -4282,6 +5192,7 @@ public class GameActivity extends Activity
                 } else {
                     if (getRandomBoolean()) {
                         Toast.makeText(this, "You won", Toast.LENGTH_LONG).show();
+                        //add external intent using getExtra for the etStatic int value
                         iv.setImageResource(R.drawable.red_grid_card);
                         iv2.setImageResource(R.drawable.red_grid_card);
                         iv3.setImageResource(R.drawable.red_grid_card);
@@ -4294,14 +5205,13 @@ public class GameActivity extends Activity
                         iv10.setImageResource(R.drawable.red_grid_card);
                         iv11.setImageResource(R.drawable.red_grid_card);
                         iv12.setImageResource(R.drawable.red_grid_card);
-                        et2.setText(cardValue.toString());
                         etStaticInt = etStaticInt + et2Int;
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
                         counter = 0;
                         cardValue = 0;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(true);
+                        et2.setText(cardValue.toString());
                     } else {
                         Toast.makeText(this, "You lost", Toast.LENGTH_LONG).show();
                         iv.setImageResource(R.drawable.red_grid_card);
@@ -4318,12 +5228,19 @@ public class GameActivity extends Activity
                         iv12.setImageResource(R.drawable.red_grid_card);
                         et2.setText(cardValue.toString());
                         etStaticInt = etStaticInt - et2Int;
+                        if (etStaticInt <= 0) {
+                            etStaticInt = 0;
+                            Intent intent = new Intent(
+                                    getApplicationContext(),
+                                    HighscoreActivity.class);
+                            startActivity(intent);
+                        }
                         cardValue = etStaticInt;
                         etStatic.setText(cardValue.toString());
                         counter = 0;
                         cardValue = 0;
                         et.setText(cardValue.toString());
-                        et2.setFocusable(true);
+                        et2.setText(cardValue.toString());
                     }
                 }
             }

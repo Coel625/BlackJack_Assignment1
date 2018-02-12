@@ -122,7 +122,6 @@
                     android:ems="10"
                     android:inputType="number"
                     android:text="0"
-                    android:focusable="true"
                     android:textColor="#fc5858" />
             </LinearLayout>
 
